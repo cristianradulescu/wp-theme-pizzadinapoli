@@ -1,0 +1,29 @@
+/**
+ * Theme Name: Pizza Di Napoli (Vito Restaurnat child theme)
+ * Theme URI: http://pizzadinapoli.ro
+ * Author URI: http://www.free-wordpress-theme.net
+ * Template: vito
+*/
+
+@import url("../vito/style.css");
+
+div.widget_shopping_cart div.art-blockcontent-body {
+  background-color: #FCEFBA;
+}
+
+div.widget_shopping_cart .art-blockcontent-body ul.cart_list li {
+  border: 1px solid #DDE5B3;
+  padding: 2px;
+  background-image: none;
+  background-color: #FDF4CE;
+  font-size: 14px;
+}
+
+div.widget_shopping_cart .art-blockcontent-body ul.cart_list li a {
+  color: #657227;
+}
+
+div.widget_shopping_cart .art-blockcontent-body ul.cart_list li span.quantity {
+  font-size: 12px;
+  color: #000;
+}
