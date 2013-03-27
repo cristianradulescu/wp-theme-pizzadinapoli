@@ -79,5 +79,22 @@ function pizzadinapoli_woocommerce_default_address_fields($fields)
 
   return $fields;
 }
-
 add_filter('woocommerce_default_address_fields', 'pizzadinapoli_woocommerce_default_address_fields', 1);
+
+
+function pizzadinapoli_woocommerce_locate_template($template, $template_name) {
+
+  if ($template_name != 'cart/cart-empty.php') {
+    remove_filter('woocommerce_locate_template', 'pizzadinapoli_woocommerce_locate_template', 10);
+
+    return woocommerce_locate_template($template_name);
+  }
+
+
+  // Look within passed path within the theme - this is priority
+	$template = dirname(__FILE__) . '/templates/' . $template_name;
+
+	// Return what we found
+	return $template;
+}
+add_filter('woocommerce_locate_template', 'pizzadinapoli_woocommerce_locate_template', 10, 2);
