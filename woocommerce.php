@@ -35,13 +35,7 @@
                               <?php endif ?>
                             </h2>
 
-                            <?php
-                            echo the_content();
-
-                            $attributes = $product->get_attributes();
-
-                            if ( empty( $attributes ) && ( ! $product->enable_dimensions_display() || ( ! $product->has_dimensions() && ! $product->has_weight() ) ) ) return;
-                            ?>
+                            <?php echo the_content(); ?>
 
                             <?php if ( $product->enable_dimensions_display() ) : ?>
 
